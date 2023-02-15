@@ -60,9 +60,12 @@ namespace phys{
         electron_mass<> * light_speed<> * light_speed<>));
 
     template<typename RealType = double>
-    constexpr auto schwinger_field = RealType(
-        electron_mass<>*electron_mass<>*(light_speed<>*light_speed<>*light_speed<>)/
-        (elementary_charge<>*reduced_plank<>));
+    constexpr auto schwinger_field = RealType(0.0014 * light_speed<>); // 0.004 is set based on 10*Bo in the pulsar simulation
+
+//    template<typename RealType = double>
+//    constexpr auto schwinger_field = RealType(
+//        electron_mass<>*electron_mass<>*(light_speed<>*light_speed<>*light_speed<>)/
+//        (elementary_charge<>*reduced_plank<>));
 
     template<typename RealType = double>
     constexpr auto tau_e = RealType(classical_electron_radius<>/light_speed<>);
